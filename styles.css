@@ -1,0 +1,86 @@
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.cathedral-window {
+    position: relative;
+    width: 200px;
+    height: 400px;
+    background-color: #444;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    border: 5px solid #555;
+}
+
+.arch {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 300px;
+    background-color: #666;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
+
+.stained-glass {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 260px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.pane {
+    width: 75px;
+    height: 75px;
+    background: repeating-linear-gradient(
+        45deg,
+        #b80000,
+        #b80000 10px,
+        #ffa500 10px,
+        #ffa500 20px
+    );
+}
+
+.pane1 { background: repeating-linear-gradient(45deg, #b80000, #b80000 10px, #ffa500 10px, #ffa500 20px); }
+.pane2 { background: repeating-linear-gradient(45deg, #ffb3b3, #ffb3b3 10px, #ff751a 10px, #ff751a 20px); }
+.pane3 { background: repeating-linear-gradient(45deg, #990000, #990000 10px, #ffcc00 10px, #ffcc00 20px); }
+.pane4 { background: repeating-linear-gradient(45deg, #ff3300, #ff3300 10px, #ffe066 10px, #ffe066 20px); }
+.pane5 { background: repeating-linear-gradient(45deg, #ff1a75, #ff1a75 10px, #ffd633 10px, #ffd633 20px); }
+.pane6 { background: repeating-linear-gradient(45deg, #ff66b3, #ff66b3 10px, #ffcc66 10px, #ffcc66 20px); }
+.pane7 { background: repeating-linear-gradient(45deg, #ff99cc, #ff99cc 10px, #ffff99 10px, #ffff99 20px); }
+.pane8 { background: repeating-linear-gradient(45deg, #ffcccc, #ffcccc 10px, #ffffcc 10px, #ffffcc 20px); }
+
+.frame {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.frame-top,
+.frame-middle,
+.frame-bottom {
+    height: 5px;
+    background-color: #333;
+}
+
+.frame-middle {
+    flex-grow: 1;
+    height: auto;
+}
